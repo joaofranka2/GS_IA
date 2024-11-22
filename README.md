@@ -3,15 +3,25 @@ Controle inteligente de ar-condicionado utilizando ESP32, sensores e integraçã
 
 # 📜 Sumário
 Introdução
+
 Objetivo do Projeto
+
 Características do Sistema
+
 Componentes Utilizados
+
 Esquema do Circuito
+
 Código-Fonte
+
 Configuração no Wokwi
+
 Configuração no Thinger.io
+
 Passo a Passo para Testar
+
 Fluxo de Operação
+
 Imagens e Demonstrações
 
 # 📖 Introdução
