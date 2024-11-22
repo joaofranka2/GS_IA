@@ -1,7 +1,7 @@
 # 🌡️ Automação de Ar-Condicionado com ESP32 e Thinger.io
 Um sistema inteligente para controle de ar-condicionado, utilizando ESP32, sensores e integração com a plataforma Thinger.io. Automatize seu ambiente e monitore tudo em tempo real!
 
-##🛠️ Visão Geral
+## 🛠️ Visão Geral
 Este projeto automatiza o controle de um ar-condicionado com base em:
 
 Temperatura ambiente: Liga ou desliga o sistema automaticamente.
