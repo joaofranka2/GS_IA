@@ -13,6 +13,7 @@ Controle inteligente de ar-condicionado utilizando ESP32, sensores e integraçã
 
 550200 - Leonardo Oliveira Esparza
 
+552491 - Danielly Pfander Campelo Rodrigues
 
 
 # 📜 Sumário
