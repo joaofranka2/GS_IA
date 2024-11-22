@@ -93,6 +93,8 @@ LED (Presença)	GPIO 37	Indica detecção de movimento
 cpp
 Copiar código
 
+<details> <summary>📄 Codigo-Fonte para Configuração do Hardware</summary>
+
 #include <ThingerESP32.h>
 #include "DHT.h"
 
@@ -273,6 +275,8 @@ void loop() {
     updateACLED();
   }
 }
+
+<details>
 
 # 🌐 Configuração no Wokwi
 
