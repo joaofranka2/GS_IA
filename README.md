@@ -275,8 +275,9 @@ void loop() {
     updateACLED();
   }
 }
-
 <details>
+
+
 
 # 🌐 Configuração no Wokwi
 
