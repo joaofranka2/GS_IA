@@ -381,8 +381,11 @@ Sem movimento detectado.
 Operação Manual:
 
 O usuário controla manualmente via painel do Thinger.io.
-📸 Imagens e Demonstrações
-🎥 Simulação no Wokwi
 
-🌐 Painel do Thinger.io
+# 📸 Imagens e Demonstrações
+![Texto Alternativo](![Captura de tela 2024-11-22 013411](https://github.com/user-attachments/assets/5ef081c5-0ed3-4943-b206-00055281b1a6)
+)
+# 🎥 Simulação no Wokwi
+
+# 🌐 Painel do Thinger.io
 
