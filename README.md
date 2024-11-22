@@ -1,93 +1,53 @@
-# GS_IA
+🌡️ Automação de Ar-Condicionado com ESP32 e Thinger.io
+Um sistema inteligente para controle de ar-condicionado, utilizando ESP32, sensores e integração com a plataforma Thinger.io. Automatize seu ambiente e monitore tudo em tempo real!
 
-Projeto: Automação de Ar-Condicionado com ESP32 e Thinger.io
-Este projeto automatiza o controle de um ar-condicionado com base em temperatura ambiente e detecção de movimento. Ele foi desenvolvido para funcionar com o microcontrolador ESP32, utilizando sensores para monitoramento do ambiente e LEDs para indicar estados do sistema. Todo o controle e monitoramento podem ser feitos através da plataforma Thinger.io, que permite ajustar configurações e visualizar dados em tempo real.
+🛠️ Visão Geral
+Este projeto automatiza o controle de um ar-condicionado com base em:
 
-Objetivos
-Automação Inteligente: Automatizar o ar-condicionado para economizar energia e melhorar o conforto, ligando-o apenas quando necessário.
-Monitoramento em Tempo Real: Exibir a temperatura e o estado do sistema em um painel remoto (Thinger.io).
-Controle Manual: Permitir que o usuário tenha controle total sobre o sistema, independentemente das condições ambientais.
-Simulação Completa no Wokwi: Oferecer uma maneira prática de testar o projeto antes da implementação real.
-Recursos do Projeto
+Temperatura ambiente: Liga ou desliga o sistema automaticamente.
+Detecção de movimento: Desliga o ar-condicionado quando não há movimento.
+Controle manual: Permite que o usuário ligue/desligue o ar-condicionado pelo painel do Thinger.io.
+Inclui funcionalidades visuais com LEDs indicadores e integra-se ao Wokwi, um simulador para facilitar o teste.
 
-Controle Automático:
+📑 Funcionalidades
+🔄 Controle Automático:
 
-O ar-condicionado é ligado quando a temperatura ultrapassa o limite configurado e há presença detectada.
-O ar-condicionado é desligado automaticamente quando não há movimento por um período ou a temperatura está abaixo do limite.
-Controle Manual:
+Liga o ar-condicionado quando a temperatura ultrapassa o limite configurado e há movimento.
+Desliga quando a temperatura está abaixo do limite ou não há movimento.
+🎛️ Controle Manual:
 
-O usuário pode ativar ou desativar o sistema manualmente pelo painel do Thinger.io, desabilitando o controle automático.
-Feedback Visual:
+O usuário pode controlar o sistema manualmente pelo Thinger.io, desabilitando o modo automático.
+🖥️ Monitoramento Remoto:
 
-Um LED indica o estado do ar-condicionado (ligado/desligado).
-Outro LED pisca para indicar detecção de movimento.
-Personalização via Thinger.io:
+Veja a temperatura em tempo real no painel do Thinger.io.
+Configure os limites de temperatura e os modos de operação.
+💡 Indicadores Visuais:
 
-
-Configuração do limite de temperatura.
-
-Alternância entre controle manual e automático.
-
-Monitoramento do estado do sistema em tempo real.
-
-Componentes Utilizados
-
-Hardware
+LED indica o estado do ar-condicionado (ligado/desligado).
+LED de movimento pisca quando há presença detectada.
+🔧 Hardware Utilizado
 
 Componente	Descrição
+🎛️ ESP32	Microcontrolador com Wi-Fi integrado
+🌡️ DHT22	Sensor de temperatura e umidade
+🚶 PIR	Sensor de movimento
+💡 2 LEDs	Indicadores de estado
+🔌 2 Resistores 220Ω	Limitação de corrente para LEDs
+🔗 Protoboard & Jumpers	Para montagem e conexões do circuito
+📊 Esquema do Circuito
 
-ESP32	Microcontrolador Wi-Fi
+Conexões:
+Componente	GPIO do ESP32	Descrição
+DHT22	GPIO 15	Sensor de temperatura
+PIR	GPIO 13	Sensor de movimento
+LED do Ar-Condicionado	GPIO 14	Indica estado do ar-condicionado
+LED de Movimento	GPIO 37	Pisca ao detectar movimento
+💻 Configuração do Ambiente
 
-DHT22	Sensor de temperatura e umidade
-
-PIR	Sensor de movimento
-
-2 LEDs	Indicação de estados
-
-2 Resistores (220Ω)	Para limitar a corrente dos LEDs
-
-Protoboard e Jumpers	Para montagem dos circuitos
-Software
-
-Wokwi: Simulador para o ESP32 e periféricos.
-
-Thinger.io: Plataforma IoT para controle remoto e monitoramento.
-
-Bibliotecas:
-
-ThingerESP32: Para integração com o Thinger.io.
-
-DHT: Para leitura do sensor DHT22.
-
-Diagrama do Circuito
-
-O circuito foi configurado no Wokwi e segue o seguinte esquema:
-
-plaintext
-Copiar código
-ESP32                     DHT22
-(VCC) ------------------> (VCC)
-(GND) ------------------> (GND)
-(GPIO 15) -------------> (DATA)
-
-ESP32                     PIR
-(VCC) ------------------> (VCC)
-(GND) ------------------> (GND)
-(GPIO 13) -------------> (OUT)
-
-ESP32                     LED AC
-(GPIO 14) -------------> (Resistor -> Ânodo LED)
-(GND) ------------------> (Cátodo LED)
-
-ESP32                     LED Presença
-(GPIO 37) -------------> (Resistor -> Ânodo LED)
-(GND) ------------------> (Cátodo LED)
-
-Configuração no Wokwi
-
-Arquivo JSON
-Utilize o seguinte JSON para configurar o ambiente no Wokwi:
-
+1. 🛠️ Configurar no Wokwi
+Acesse Wokwi.
+Use o arquivo JSON abaixo para configurar o ambiente no simulador:
+<details> <summary>Clique para expandir</summary>
 json
 Copiar código
 {
@@ -107,56 +67,37 @@ Copiar código
     [ "esp:TX", "$serialMonitor:RX", "", [] ],
     [ "esp:RX", "$serialMonitor:TX", "", [] ],
     [ "dht1:SDA", "esp:15", "green", [ "v0" ] ],
-    [ "dht1:GND", "esp:GND.2", "black", [ "v19.2", "h144" ] ],
-    [ "pir1:VCC", "esp:3V3.2", "red", [ "v0" ] ],
     [ "pir1:OUT", "esp:13", "green", [ "v0" ] ],
-    [ "pir1:GND", "esp:GND.1", "black", [ "v0" ] ],
-    [ "dht1:VCC", "esp:3V3.1", "red", [ "v0" ] ],
-    [ "r1:1", "esp:14", "green", [ "v0" ] ],
-    [ "led1:A", "r1:2", "green", [ "v0" ] ],
     [ "led1:C", "esp:GND.3", "green", [ "v0" ] ],
-    [ "r2:1", "esp:37", "green", [ "v0" ] ],
-    [ "r2:2", "led2:A", "green", [ "v0" ] ],
     [ "led2:C", "esp:GND.4", "green", [ "v0" ] ]
-  ],
-  "dependencies": {}
+  ]
 }
+</details>
 
-Código no Wokwi
-
-Insira o código no editor do Wokwi, como descrito anteriormente.
-
-Configuração no Thinger.io
-
-Acesse o painel do Thinger.io: https://console.thinger.io/.
+2. 🌐 Configurar no Thinger.io
+Acesse Thinger.io.
 Crie um dispositivo com as credenciais:
-
 USERNAME: Jonas_GS
-
 DEVICE_ID: GS_IA
-
 DEVICE_CREDENTIAL: 123456.
-
-Configure os recursos:
-
-Temperature: Mostra a temperatura lida pelo DHT22.
-
-AC_State: Indica o estado do ar-condicionado (ligado/desligado).
-
+Configure os seguintes recursos:
+Temperature: Monitora a temperatura ambiente.
+AC_State: Indica se o ar-condicionado está ligado/desligado.
 ManualControl: Permite alternar entre controle manual e automático.
+SetTemperature: Configura o limite de temperatura.
+🔥 Demonstração
 
-SetTemperature: Ajusta o limite de temperatura.
+🌡️ Controle de Temperatura
+Ajuste o limite de temperatura no Thinger.io.
+Acompanhe o estado do ar-condicionado com base na leitura do sensor.
 
-Como Funciona
+🚶 Controle de Presença
+Simule movimento no Wokwi para ver o LED de presença piscando.
 
-Estado Automático:
-
-Se o PIR detectar movimento e a temperatura estiver acima do limite configurado, o ar-condicionado liga.
-Se não houver movimento por 2 segundos ou a temperatura estiver abaixo do limite, ele desliga.
-Controle Manual:
-
-Pelo painel do Thinger.io, o usuário pode ativar ou desativar o ar-condicionado manualmente, ignorando as condições automáticas.
-Visualização no Thinger.io:
-
-Monitorar a temperatura e o estado do ar-condicionado em tempo real.
-Configurar os limites de temperatura e alternar modos.
+🛠️ Como Contribuir
+Faça um fork do repositório.
+Clone o projeto para o seu computador:
+bash
+Copiar código
+git clone https://github.com/SeuUsername/NomeDoProjeto.git
+Adicione melhorias e faça um pull request.
