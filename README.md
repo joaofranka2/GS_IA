@@ -29,22 +29,34 @@ LED de movimento pisca quando há presença detectada.
 
 Componente	Descrição
 🎛️ ESP32	Microcontrolador com Wi-Fi integrado
-🌡️ DHT22	Sensor de temperatura e umidade
-🚶 PIR	Sensor de movimento
-💡 2 LEDs	Indicadores de estado
-🔌 2 Resistores 220Ω	Limitação de corrente para LEDs
-🔗 Protoboard & Jumpers	Para montagem e conexões do circuito
-📊 Esquema do Circuito
 
-Conexões:
+🌡️ DHT22	Sensor de temperatura e umidade
+
+🚶 PIR	Sensor de movimento
+
+💡 2 LEDs	Indicadores de estado
+
+🔌 2 Resistores 220Ω	Limitação de corrente para LEDs
+
+🔗 Protoboard & Jumpers	Para montagem e conexões do circuito
+
+# 📊 Esquema do Circuito
+
+## Conexões:
 Componente	GPIO do ESP32	Descrição
+
 DHT22	GPIO 15	Sensor de temperatura
+
 PIR	GPIO 13	Sensor de movimento
+
 LED do Ar-Condicionado	GPIO 14	Indica estado do ar-condicionado
+
 LED de Movimento	GPIO 37	Pisca ao detectar movimento
-💻 Configuração do Ambiente
+
+#💻 Configuração do Ambiente
 
 1. 🛠️ Configurar no Wokwi
+
 Acesse Wokwi.
 Use o arquivo JSON abaixo para configurar o ambiente no simulador:
 <details> <summary>Clique para expandir</summary>
@@ -74,7 +86,7 @@ Copiar código
 }
 </details>
 
-2. 🌐 Configurar no Thinger.io
+#2. 🌐 Configurar no Thinger.io
 Acesse Thinger.io.
 Crie um dispositivo com as credenciais:
 USERNAME: Jonas_GS
@@ -85,16 +97,17 @@ Temperature: Monitora a temperatura ambiente.
 AC_State: Indica se o ar-condicionado está ligado/desligado.
 ManualControl: Permite alternar entre controle manual e automático.
 SetTemperature: Configura o limite de temperatura.
-🔥 Demonstração
 
-🌡️ Controle de Temperatura
+#🔥 Demonstração
+
+## 🌡️ Controle de Temperatura
 Ajuste o limite de temperatura no Thinger.io.
 Acompanhe o estado do ar-condicionado com base na leitura do sensor.
 
-🚶 Controle de Presença
+## 🚶 Controle de Presença
 Simule movimento no Wokwi para ver o LED de presença piscando.
 
-🛠️ Como Contribuir
+## 🛠️ Como Contribuir
 Faça um fork do repositório.
 Clone o projeto para o seu computador:
 bash
