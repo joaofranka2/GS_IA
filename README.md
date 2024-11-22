@@ -391,5 +391,13 @@ O usuário controla manualmente via painel do Thinger.io.
 
 # 🎥 Simulação no Wokwi
 
+(![Captura de tela 2024-11-22 015856](https://github.com/user-attachments/assets/ef983fe1-37e2-406a-bf41-fec36bb1cad6)
+)
+
 # 🌐 Painel do Thinger.io
+(![Captura de tela 2024-11-22 015955](https://github.com/user-attachments/assets/683fdb84-1afe-4c1c-803f-96d102ae0299)
+)
+
+(![Captura de tela 2024-11-22 015930](https://github.com/user-attachments/assets/ea0ed8b2-5543-4889-a5f5-48822e920439)
+)
 
