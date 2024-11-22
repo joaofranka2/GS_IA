@@ -54,9 +54,9 @@ LED do Ar-Condicionado	GPIO 14	Indica estado do ar-condicionado
 
 LED de Movimento	GPIO 37	Pisca ao detectar movimento
 
-#💻 Configuração do Ambiente
+# 💻 Configuração do Ambiente
 
-1. 🛠️ Configurar no Wokwi
+ ## 🛠️ Configurar no Wokwi
 
 Acesse Wokwi.
 Use o arquivo JSON abaixo para configurar o ambiente no simulador:
