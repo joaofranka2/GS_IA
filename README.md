@@ -1,6 +1,20 @@
 # 🌡️ Automação de Ar-Condicionado com ESP32 e Thinger.io
 Controle inteligente de ar-condicionado utilizando ESP32, sensores e integração com a plataforma Thinger.io. Automatize seu ambiente, economize energia e acompanhe tudo em tempo real!
 
+
+
+### Grupo
+
+552421 - Flavio Sousa Vasconcelos
+
+552368 - Wellington De Oliveira Urcino Da Silva
+
+97887 - João Carlos França Figueiredo
+
+550200 - Leonardo Oliveira Esparza
+
+
+
 # 📜 Sumário
 Introdução
 
