@@ -1,7 +1,7 @@
-🌡️ Automação de Ar-Condicionado com ESP32 e Thinger.io
+# 🌡️ Automação de Ar-Condicionado com ESP32 e Thinger.io
 Um sistema inteligente para controle de ar-condicionado, utilizando ESP32, sensores e integração com a plataforma Thinger.io. Automatize seu ambiente e monitore tudo em tempo real!
 
-🛠️ Visão Geral
+##🛠️ Visão Geral
 Este projeto automatiza o controle de um ar-condicionado com base em:
 
 Temperatura ambiente: Liga ou desliga o sistema automaticamente.
@@ -9,25 +9,26 @@ Detecção de movimento: Desliga o ar-condicionado quando não há movimento.
 Controle manual: Permite que o usuário ligue/desligue o ar-condicionado pelo painel do Thinger.io.
 Inclui funcionalidades visuais com LEDs indicadores e integra-se ao Wokwi, um simulador para facilitar o teste.
 
-📑 Funcionalidades
-🔄 Controle Automático:
+# 📑 Funcionalidades
 
+🔄 Controle Automático:
 Liga o ar-condicionado quando a temperatura ultrapassa o limite configurado e há movimento.
 Desliga quando a temperatura está abaixo do limite ou não há movimento.
+
 🎛️ Controle Manual:
-
 O usuário pode controlar o sistema manualmente pelo Thinger.io, desabilitando o modo automático.
-🖥️ Monitoramento Remoto:
 
+🖥️ Monitoramento Remoto:
 Veja a temperatura em tempo real no painel do Thinger.io.
 Configure os limites de temperatura e os modos de operação.
-💡 Indicadores Visuais:
 
+💡 Indicadores Visuais:
 LED indica o estado do ar-condicionado (ligado/desligado).
 LED de movimento pisca quando há presença detectada.
-🔧 Hardware Utilizado
 
+🔧 Hardware Utilizado
 Componente	Descrição
+
 🎛️ ESP32	Microcontrolador com Wi-Fi integrado
 
 🌡️ DHT22	Sensor de temperatura e umidade
@@ -86,7 +87,7 @@ Copiar código
 }
 </details>
 
-#2. 🌐 Configurar no Thinger.io
+# 🌐 Configurar no Thinger.io
 Acesse Thinger.io.
 Crie um dispositivo com as credenciais:
 USERNAME: Jonas_GS
