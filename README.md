@@ -16,6 +16,15 @@ Controle inteligente de ar-condicionado utilizando ESP32, sensores e integraçã
 552491 - Danielly Pfander Campelo Rodrigues
 
 
+# LInk Videos 
+https://www.youtube.com/watch?v=NanQhyyyE7I
+
+continuaçao mostrado so o codigo funcionando:
+
+https://www.youtube.com/watch?v=mTe1zkbW80s
+
+
+
 # 📜 Sumário
 Introdução
 
